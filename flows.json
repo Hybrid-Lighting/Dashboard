@@ -1,0 +1,664 @@
+[
+    {
+        "id": "817a5ce88dd4d40c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "499107474547c138",
+        "type": "ui_tab",
+        "name": "LED",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "63ce84ecf20ae656",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "358b1178a3211907",
+        "type": "ui_group",
+        "name": "Outgoing",
+        "tab": "499107474547c138",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5823f67c4a75ac5b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.eclipseprojects.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "eb50a219ba43cdec",
+        "type": "ui_group",
+        "name": "Incoming",
+        "tab": "499107474547c138",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "09e5d6a6f6d1eb8a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "adf249e7a9ef46d2924fa18aab4b7589.s2.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "51d5d72dae163971",
+        "type": "mqtt out",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "ems20/0974347/LED2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5823f67c4a75ac5b",
+        "x": 520,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "64091b04e520d4f4",
+        "type": "mqtt out",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "ems20/0974347/LED1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5823f67c4a75ac5b",
+        "x": 520,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "97ea0581aaa6160f",
+        "type": "mqtt out",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "ems20/0974347/LED3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5823f67c4a75ac5b",
+        "x": 520,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1f0ba508fb722fcc",
+        "type": "mqtt in",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "HybridLighting/Power/Battery",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5823f67c4a75ac5b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "9bf3c16b785c505f",
+                "bc2e47ba0e1c3202"
+            ]
+        ]
+    },
+    {
+        "id": "9bf3c16b785c505f",
+        "type": "ui_text",
+        "z": "817a5ce88dd4d40c",
+        "group": "eb50a219ba43cdec",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Accu percentage",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 510,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d2064504f9b69953",
+        "type": "ui_button",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "358b1178a3211907",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Toggle Led 1 (Red)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "64091b04e520d4f4"
+            ]
+        ]
+    },
+    {
+        "id": "05d8ca5412426ca3",
+        "type": "ui_button",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "358b1178a3211907",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Toggle Led 2 (Yellow)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "51d5d72dae163971"
+            ]
+        ]
+    },
+    {
+        "id": "1f73a6553bf33922",
+        "type": "ui_button",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "358b1178a3211907",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Toggle Led 3 (Green)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "97ea0581aaa6160f"
+            ]
+        ]
+    },
+    {
+        "id": "bc2e47ba0e1c3202",
+        "type": "ui_gauge",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "eb50a219ba43cdec",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Accu percentage",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "20",
+        "seg2": "80",
+        "className": "",
+        "x": 510,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d652de194a371345",
+        "type": "ui_text",
+        "z": "817a5ce88dd4d40c",
+        "group": "eb50a219ba43cdec",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Stroombron",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 530,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a294d28c5fc2d65b",
+        "type": "mqtt in",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "HybridLighting/Power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5823f67c4a75ac5b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 700,
+        "wires": [
+            [
+                "d652de194a371345"
+            ]
+        ]
+    },
+    {
+        "id": "60b2bdb41187457e",
+        "type": "ui_button",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "358b1178a3211907",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Toggle Power Source",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "c5ba0499651ba3ff"
+            ]
+        ]
+    },
+    {
+        "id": "5d355797befdcda1",
+        "type": "ui_button",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "358b1178a3211907",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Battery up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "a0a97b5e13ec01fa"
+            ]
+        ]
+    },
+    {
+        "id": "69dc07a1100c07c1",
+        "type": "ui_button",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "358b1178a3211907",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Battery down",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 360,
+        "wires": [
+            [
+                "a492f0f536b87e78"
+            ]
+        ]
+    },
+    {
+        "id": "df4186780847b2cc",
+        "type": "ui_button",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "358b1178a3211907",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Battery 0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "a05327bac76e7634"
+            ]
+        ]
+    },
+    {
+        "id": "d9c499d37f3d64e2",
+        "type": "ui_button",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "group": "358b1178a3211907",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Battery 100",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 480,
+        "wires": [
+            [
+                "36943caadce7e57c"
+            ]
+        ]
+    },
+    {
+        "id": "c5ba0499651ba3ff",
+        "type": "mqtt out",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "HybridLighting/Power/Toggle",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5823f67c4a75ac5b",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a0a97b5e13ec01fa",
+        "type": "mqtt out",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "HybridLighting/Power/Battery/Up",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5823f67c4a75ac5b",
+        "x": 550,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a492f0f536b87e78",
+        "type": "mqtt out",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "HybridLighting/Power/Battery/Down",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5823f67c4a75ac5b",
+        "x": 560,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a05327bac76e7634",
+        "type": "mqtt out",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "HybridLighting/Power/Battery/0",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5823f67c4a75ac5b",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "36943caadce7e57c",
+        "type": "mqtt out",
+        "z": "817a5ce88dd4d40c",
+        "name": "",
+        "topic": "HybridLighting/Power/Battery/100",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5823f67c4a75ac5b",
+        "x": 560,
+        "y": 480,
+        "wires": []
+    }
+]
